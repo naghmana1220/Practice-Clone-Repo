@@ -1,6 +1,6 @@
 import Image from "next/image";
+import { client } from "@/sanity/lib/client";
 
-import { client  } from "../../sanity-migration/sanityClient";
   const Home = async () => {
     const products = await client.fetch(`
       *[_type == "product"]{
